@@ -2,6 +2,7 @@
 # 우분투라는 이미지를 쓸 것임
 FROM    ubuntu:22.04 
 RUN     apt-get update 
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends apt-utils
 # Node.js와 npm 설치 
 RUN     DEBIAN_FRONTEND=noninteractive apt-get install -y curl 
 RUN     curl -sL https://deb.nodesource.com/setup_16.x | bash -
